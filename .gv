@@ -1,0 +1,19 @@
+digraph {
+	subgraph cluster66 {
+		"β" [label="β
+~
+StudentT" shape=ellipse]
+		label=66 labeljust=r labelloc=b style=rounded
+	}
+	sigma [label="sigma
+~
+HalfNormal" shape=ellipse]
+	subgraph cluster395 {
+		y_hat [label="y_hat
+~
+Normal" shape=ellipse style=filled]
+		label=395 labeljust=r labelloc=b style=rounded
+	}
+	sigma -> y_hat
+	"β" -> y_hat
+}
