@@ -1,19 +1,22 @@
 digraph {
-	subgraph cluster66 {
-		"β" [label="β
+	subgraph cluster13 {
+		"β_continuous" [label="β_continuous
 ~
 StudentT" shape=ellipse]
-		label=66 labeljust=r labelloc=b style=rounded
+		label=13 labeljust=r labelloc=b style=rounded
 	}
-	sigma [label="sigma
+	subgraph cluster54 {
+		"β_binary" [label="β_binary
 ~
-HalfNormal" shape=ellipse]
+Normal" shape=ellipse]
+		label=54 labeljust=r labelloc=b style=rounded
+	}
 	subgraph cluster395 {
-		y_hat [label="y_hat
+		y_obs [label="y_obs
 ~
 Normal" shape=ellipse style=filled]
 		label=395 labeljust=r labelloc=b style=rounded
 	}
-	sigma -> y_hat
-	"β" -> y_hat
+	"β_continuous" -> y_obs
+	"β_binary" -> y_obs
 }
